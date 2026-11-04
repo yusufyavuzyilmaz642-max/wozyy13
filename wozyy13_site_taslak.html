@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050a07">
+<title>WOZYY13 | Private Cyber Defense</title>
+<style>
+:root{--bg:#050a07;--panel:#0b1710;--panel2:#102319;--line:#1d5635;--green:#43ff91;--muted:#9ab5a4;--white:#edfff3;--gold:#ffd477}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#164329 0,#050a07 58%);color:var(--white);font:15px/1.5 system-ui,Arial,sans-serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(#43ff9117 1px,transparent 1px),linear-gradient(90deg,#43ff9117 1px,transparent 1px);background-size:32px 32px}
+header{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:13px 17px;background:#050a07ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.brand{font-size:20px;font-weight:950;letter-spacing:2px;color:var(--green)}.brand small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted)}
+.pill,.tag{border:1px solid var(--line);border-radius:30px;padding:5px 10px;color:var(--green);font-size:10px;letter-spacing:1px}
+main{max-width:980px;margin:auto;padding:22px 15px 60px}.hero,.panel{border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#102319ed,#09130d);padding:21px;margin-bottom:14px}
+.eyebrow{font-size:10px;color:var(--green);letter-spacing:3px;font-weight:800}.hero h1{font-size:clamp(29px,7vw,48px);line-height:1.05;margin:10px 0}.muted{color:var(--muted)}.hero p{max-width:650px}
+.nav{display:flex;gap:8px;overflow:auto;padding:12px 0 17px}.nav button,.btn{white-space:nowrap;background:#0b1a11;color:var(--white);border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-weight:700;cursor:pointer}.nav button.active,.btn.primary{border-color:var(--green);color:var(--green);background:#123b24}
+.view{display:none}.view.active{display:block}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:12px}.tile{border:1px solid var(--line);border-radius:14px;background:#0b1710;padding:16px}.tile h3{margin:7px 0}.tile p{margin:0;color:var(--muted);font-size:13px}
+input{width:100%;padding:12px;background:#030805;border:1px solid var(--line);border-radius:10px;color:white;margin:7px 0 12px;font:inherit}label{font-size:12px;color:var(--muted)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.note{border-left:3px solid var(--gold);padding:10px 12px;background:#241d0b66;color:#f6e5b8;border-radius:6px;font-size:12px}
+.admin{color:var(--green);font-weight:800}.hidden{display:none!important}
+.cam{border:1px solid var(--line);border-radius:12px;padding:15px;min-height:110px;background:repeating-linear-gradient(0deg,#07140c,#07140c 3px,#0c1e12 4px,#0c1e12 6px);display:flex;flex-direction:column;justify-content:space-between}.cam strong{color:var(--green)}.cam small{color:var(--gold)}
+footer{text-align:center;color:#688875;font-size:11px;padding:25px}
+@media(min-width:700px){main{padding-top:30px}.hero{padding:32px}}
+</style>
+</head>
+<body>
+<header><div class="brand">WOZYY13<small>PRIVATE CYBER DEFENSE</small></div><span class="pill">● DAVETLE ERİŞİM</span></header>
+<main>
+<section class="hero"><div class="eyebrow">PRIVATE SECURITY PLATFORM</div><h1>Dijital güvenlik.<br>Kontrol sende.</h1><p class="muted">WOZYY13; gizlilik farkındalığı, kendi ağını koruma ve siber güvenlik öğrenimi için tasarlanmış özel platform arayüzüdür.</p></section>
+<section class="panel" id="login">
+ <div class="eyebrow">MEMBER ACCESS</div><h2>Özel davetli kullanıcı girişi</h2>
+ <p class="muted">Bu dosya web sitesi taslağıdır. Gerçek üyelik ve davet kodu doğrulaması için sunucu tarafında kimlik doğrulama kurulmalıdır.</p>
+ <label for="username">Kullanıcı adı</label><input id="username" autocomplete="username" placeholder="Kullanıcı adın">
+ <label for="invite">Davet kodu</label><input id="invite" autocomplete="off" placeholder="Yöneticinin verdiği davet kodu">
+ <button class="btn primary" id="preview">Demo panelini görüntüle</button>
+ <p class="muted" id="loginmsg" aria-live="polite" style="font-size:12px"></p>
+ <div class="note">Güvenlik: Bu önizleme gerçek giriş yapmaz. HTML içine davet kodu veya yönetici parolası koyma; kaynak kodunu inceleyen kişiler bunları görebilir.</div>
+</section>
+<nav class="nav" aria-label="Bölümler"><button class="active" data-target="dashboard">Kontrol Merkezi</button><button data-target="camera">Kamera Gizliliği</button><button data-target="wifi">Wi-Fi Koruması</button><button data-target="academy">Cyber Academy</button><button data-target="admin">Yönetici</button></nav>
+<section class="view active" id="dashboard">
+ <div class="grid">
+  <article class="tile"><span class="tag">PRIVACY</span><h3>Kamera gizliliği</h3><p>Kendi cihazındaki kamera izinlerini ve tarayıcı gizlilik ayarlarını kontrol etmeyi öğren.</p></article>
+  <article class="tile"><span class="tag">NETWORK</span><h3>Wi-Fi güvenliği</h3><p>Kendi modeminin yönetim panelinden bağlı cihazları incelemeyi öğren.</p></article>
+  <article class="tile"><span class="tag">LEARNING</span><h3>Siber güvenlik</h3><p>Parola güvenliği, oltalama farkındalığı ve güvenli gezinme.</p></article>
+ </div>
+</section>
+<section class="view" id="camera"><div class="panel"><span class="tag">CAMERA PRIVACY</span><h2>Kamera izin merkezi</h2><p class="muted">Tarayıcı adres çubuğundaki site ayarlarından bu siteye verdiğin kamera ve mikrofon izinlerini görebilir, gerekirse kapatabilirsin. Bu sayfa gizli kameraları uzaktan bulamaz veya başkasının kamerasına erişemez.</p><button class="btn" id="camhelp">Kamera izni hakkında bilgi</button><p id="cammsg" class="muted"></p></div></section>
+<section class="view" id="wifi"><div class="panel"><span class="tag">NETWORK DEFENSE</span><h2>Kendi Wi-Fi ağını koru</h2><p class="muted">Modeminin resmi yönetim panelinden bağlı cihazları incele. Tanımadığın bir cihaz görürsen ağ parolasını değiştir, WPA2/WPA3 kullan ve modem yazılımını güncelle.</p><div class="note">Bu web sayfası Wi-Fi bağlantılarını kesemez veya ağındaki cihazları otomatik tarayamaz. Erişim engelleme işlemi yalnızca kendi modeminin yetkili yönetim arayüzünden yapılmalıdır.</div></div></section>
+<section class="view" id="academy"><div class="grid">
+ <article class="tile"><span class="tag">01</span><h3>Güçlü parolalar</h3><p>Her hesap için benzersiz parola ve mümkünse parola yöneticisi kullan.</p></article>
+ <article class="tile"><span class="tag">02</span><h3>Oltalama</h3><p>Şüpheli bağlantıları açmadan önce göndereni ve alan adını kontrol et.</p></article>
+ <article class="tile"><span class="tag">03</span><h3>İki aşamalı doğrulama</h3><p>Desteklenen hesaplarda ek doğrulamayı etkinleştir.</p></article>
+ </div></section>
+<section class="view" id="admin"><div class="panel"><span class="tag">ADMIN CONSOLE</span><h2>Yönetici alanı</h2><p>Yönetici kullanıcı adı: <strong class="admin">Wozyy13Master</strong></p><p class="muted">Bu isim taslak arayüzde gösterilir. Gerçek yönetici yetkileri, kullanıcı davetleri ve üyelik iptali sunucu tarafında kurulmalıdır.</p><div class="note">Yönetici parolası veya davet kodu henüz tanımlanmadı. Bunları herkese açık HTML dosyasına yazma.</div></div></section>
+<footer>WOZYY13 · PRIVATE CYBER DEFENSE · Web arayüzü taslağı</footer>
+</main>
+<script>
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.target).classList.add('active')}));
+document.getElementById('preview').addEventListener('click',()=>{let u=document.getElementById('username').value.trim();document.getElementById('loginmsg').textContent=u?'Bu yalnızca arayüz önizlemesidir; gerçek üyelik doğrulaması henüz etkin değil.':'Önce kullanıcı adını yaz.'});
+document.getElementById('camhelp').addEventListener('click',()=>{document.getElementById('cammsg').textContent='Chrome: adres çubuğunun yanındaki site simgesi → İzinler → Kamera. Buradan izinleri yönetebilirsin.'});
+</script>
+</body></html>
